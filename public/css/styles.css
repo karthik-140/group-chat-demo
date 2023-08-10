@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-header{
+    background-color: rgb(212, 184, 59);
+    padding: 1rem 2rem;
+}
+.nav-links{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links a:hover{
+    color: #362f0e;
+}
+
+.form{
+width: 300px;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+padding: .5rem;
+margin: auto;
+}
+.form input{
+padding: .3rem;
+border-radius: 5px;
+outline: none;
+border: 1px solid #d4b83b;
+}
+.form button{
+padding: .3rem 2rem;
+background-color: transparent;
+border: 1px solid blue;
+border-radius: 8px;
+width: max-content;
+font-size: larger;
+}
+.form button:hover{
+background-color: blue;
+color: white;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero-section">
+        <form class="form" action="/" method="POST" onSubmit="document.getElementById('username').value=localStorage.getItem('username')">
+            <input type="text" name="message" id="message" placeholder="enter your message" />
+            <input type="hidden" name="username" id="username" />
+            <button type="submit">send</button>
+        </form>
+    </main>
+</body>
+</html>

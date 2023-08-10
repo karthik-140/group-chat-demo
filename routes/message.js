@@ -1,5 +1,8 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
+
+const pathDir = require('../utils/path');
 
 const routes = express.Router();
 routes.use(express.json());
@@ -9,11 +12,8 @@ routes.get('/', (req, res, next) => {
     if (err) {
       data = "No chat exists";
     }
-    res.send(`${data}<form action="/" method="POST" onSubmit="document.getElementById('username').value=localStorage.getItem('username')">
-    <input type="text" name="message" id="message" />
-    <input type="hidden" name="username" id="username" />
-    <button type="submit">send</button>
-    </form>`);
+    
+    res.sendFile(path.join(pathDir, 'views', 'message.html'));
   });
 });
 
